@@ -1,0 +1,46 @@
+body {
+    max-width: 100%; /* ограничение максимальной ширины  */
+    margin: 0 auto;
+}
+
+header {
+    width: 80%;
+    background: blue;
+    padding: 10px;
+    height: 100px;
+}
+/* для всех блоков внутри body изменяем алгоритм расчета ширины блоков и добавляем все блокам поля 10px */
+body div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.left-sidebar {
+    width: 20%;
+    background: #8ED9B6;
+    float: left;
+    height: 100vh;
+}
+
+.mainspace {
+    width: 80%;
+    float: left;
+    padding: 0px;
+    height: 100vh;
+}
+
+.content {
+    float: left;
+    width: 60%;   
+    background: goldenrod;
+    height: calc(100vh - 100px);
+}
+
+.right-sidebar {
+    width: 20%;
+    background: #FF9282;
+    float: left;
+    height: calc(100vh - 100px);;
+}
