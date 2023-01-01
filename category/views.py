@@ -1,6 +1,9 @@
 from django.shortcuts import render
+from account.models import Account
 
 
 def index(request):
-
-    return render(request, "category/index.html")
+    context = {
+        "accounts": Account.objects.all(),
+    }
+    return render(request, "category/index.html", context)

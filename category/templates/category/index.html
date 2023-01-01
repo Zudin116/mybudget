@@ -1,9 +1,10 @@
 {% extends './base.html' %}
-
-{% block title%}
-My budget
-{% endblock %}
-
-{% block content%}
-mainspace
+{% load static %}
+{% block title %}My budget{% endblock %}
+{% block accounts_block %}
+    {% for account in accounts %}
+        <li>
+            <a href="#" class="link-dark d-inline-flex text-decoration-none rounded">{{ account.balance }}</a>
+        </li>
+    {% endfor %}
 {% endblock %}

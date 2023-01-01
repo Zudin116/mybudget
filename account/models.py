@@ -1,4 +1,5 @@
 from django.db import models
+from decimal import *
 
 
 class Account(models.Model):
@@ -6,6 +7,9 @@ class Account(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    def balance(self) -> Decimal:
+        return Decimal(15.5)
 
     class Meta:
         db_table = "account"

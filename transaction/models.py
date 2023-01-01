@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Trasaction(models.Model):
+class Transaction(models.Model):
     account = models.ForeignKey(to="account.Account", on_delete=models.PROTECT)
     timestamp = models.DateTimeField()
     payee = models.ForeignKey(to="payee.Payee", on_delete=models.PROTECT)
